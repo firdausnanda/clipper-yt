@@ -20,3 +20,8 @@
   background: radial-gradient(circle at top right, #fdf2f8, transparent),
               radial-gradient(circle at bottom left, #eff6ff, transparent);
 }
+
+/* Override NProgress Loading Bar Thickness */
+#nprogress .bar {
+  height: 4px !important;
+}
