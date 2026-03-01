@@ -27,23 +27,25 @@ export default function Navbar({ auth }) {
           {auth.user ? (
             <Link
               href={route('dashboard')}
-              className="bg-slate-900 text-white px-5 py-2.5 rounded-full shadow-md hover:shadow-xl hover:bg-slate-800 transition-all active:scale-95 cursor-pointer inline-block font-semibold text-sm"
+              className="group relative inline-flex items-center justify-center bg-slate-900 text-white px-6 py-2.5 rounded-full shadow-lg shadow-slate-900/20 hover:shadow-slate-900/40 hover:-translate-y-0.5 transition-all active:scale-95 font-semibold text-sm overflow-hidden"
             >
-              Dashboard
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-800 to-slate-900 translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
+              <span className="relative">Dashboard Aplikasi</span>
             </Link>
           ) : (
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2 sm:gap-4">
               <Link
                 href={route('login')}
-                className="text-slate-600 font-semibold hover:text-slate-900 transition-colors text-sm"
+                className="text-slate-600 font-semibold hover:text-indigo-600 hover:bg-slate-100/80 px-4 py-2.5 rounded-full transition-all text-sm active:scale-95"
               >
                 Masuk
               </Link>
               <Link
                 href={route('register')}
-                className="bg-slate-900 text-white px-6 py-2.5 rounded-full shadow-lg shadow-slate-900/20 hover:shadow-slate-900/40 hover:-translate-y-0.5 transition-all active:scale-95 cursor-pointer inline-block font-semibold text-sm"
+                className="group relative inline-flex items-center justify-center bg-gradient-to-r from-indigo-600 to-indigo-500 text-white px-6 py-2.5 rounded-full shadow-md shadow-indigo-500/20 hover:shadow-xl hover:shadow-indigo-500/40 hover:-translate-y-0.5 transition-all active:scale-95 font-bold text-sm overflow-hidden ring-1 ring-inset ring-white/20"
               >
-                Daftar Gratis
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-indigo-400 translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
+                <span className="relative">Daftar Gratis</span>
               </Link>
             </div>
           )}
