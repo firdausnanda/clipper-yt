@@ -22,7 +22,7 @@ export default function Footer() {
           <a className="hover:text-indigo-600 transition-colors cursor-pointer">Pricing</a>
           <a className="hover:text-indigo-600 transition-colors cursor-pointer">API Documentation</a>
           <Link href={route('privacy.policy')} className="hover:text-indigo-600 transition-colors cursor-pointer">Privacy Policy</Link>
-          <a className="hover:text-indigo-600 transition-colors cursor-pointer">Terms of Service</a>
+          <Link href={route('terms.of.service')} className="hover:text-indigo-600 transition-colors cursor-pointer">Terms of Service</Link>
         </div>
 
         <div className="flex flex-col items-center md:items-end gap-6">

@@ -46,12 +46,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/terms-of-service', function () {
-    return '
-        <h1>Terms of Service</h1>
-        <p>Aplikasi ini sedang dalam masa pengembangan (Development Phase).</p>
-        <p>Dengan menggunakan aplikasi ini, Anda setuju untuk mengizinkan sistem memproses video YouTube dan mengunggahnya ke akun TikTok Anda sesuai dengan izin otorisasi OAuth yang diberikan.</p>
-    ';
-});
+    return Inertia::render('TermsOfService');
+})->name('terms.of.service');
 
 Route::get('/privacy-policy', function () {
     return Inertia::render('PrivacyPolicy');
